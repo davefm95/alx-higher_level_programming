@@ -1,0 +1,1 @@
+This file contaiks info om the 0x00-python-hello_world project
