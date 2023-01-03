@@ -1,6 +1,0 @@
-#!/usr/bin/python3
-def uppercase(str):
-    for c in str:
-        ac = ord(c)
-        print("{:c}".format(ac if ac >= 65 and ac <= 90 else ac - 32), end="")
-    print("")
