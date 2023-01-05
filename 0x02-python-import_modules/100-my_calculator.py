@@ -8,8 +8,8 @@ if __name__ == "__main__":
     if argv[2] != "+" and argv[2] != "-" and argv[2] != "*" and argv[2] != "/":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-        a = int(argv[1])
-        b = int(argv[3])
+    a = int(argv[1])
+    b = int(argv[3])
     if argv[2] == "+":
         print("{:d} {:s} {:d} = {:d}".format(a, argv[2], b, add(a, b)))
     elif argv[2] == "-":
