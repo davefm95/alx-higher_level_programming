@@ -1,0 +1,1 @@
+This file contains information abouy the 0x03-python-data_structures project
