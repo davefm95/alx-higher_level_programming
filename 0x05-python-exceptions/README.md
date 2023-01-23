@@ -1,0 +1,1 @@
+This file contains information about the 0x05-python-exceptions project
