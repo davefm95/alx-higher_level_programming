@@ -3,7 +3,7 @@ def safe_print_list(my_list=[], x=0):
     for item in range(x):
         try:
             print("{}".format(my_list[item]), end="")
-        except IndexError:
+        except Exception:
             print("")
             return item
     print("")
