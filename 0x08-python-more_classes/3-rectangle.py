@@ -55,14 +55,16 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
     def __str__(self):
         """Returns informal string relresentation of object
         """
-        if self.__width != 0 and self.__height != 0:
-            string = ""
+        string = ""
+        if self.__width == 0 or self.__height == 0:y
+        else:
             for i in range(self.__height):
                 for j in range(self.__width):
                     string += "#"
                 if i != self.__height - 1:
                     string += "\n"
-            return string
+        return string
