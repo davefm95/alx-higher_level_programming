@@ -73,4 +73,4 @@ class Rectangle:
     def __repr__(self):
         """Returns official string representation of object
         """
-        return f"Rectangle ({self.__width}, {self.__height})"
+        return f"Rectangle ({self.width}, {self.height})"
