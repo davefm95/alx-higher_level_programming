@@ -1,0 +1,29 @@
+The 5-text_indentation module
+=============================
+Using text_indentation
+_______________________
+>>> ti = __import__('5-text_indentation').text_indentation
+
+>>> ti("Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quonam modo?Non autem hoc:")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Non autem hoc:
+<BLANKLINE>
+>>> ti("")
+
+>>> ti([2, "str"])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> ti(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> ti("qwertyuiopasdfghjklzxcvbnm1234567890\n@#$_&-+()/")
+qwertyuiopasdfghjklzxcvbnm1234567890
+@#$_&-+()/

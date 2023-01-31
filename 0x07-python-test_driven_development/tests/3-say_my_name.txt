@@ -1,0 +1,25 @@
+The 3-say_my_name Module
+=========================
+Using say_my_name
+__________________
+>>> smn = __import__('3-say_my_name').say_my_name
+
+>>> smn("john", "smith")
+My name is john smith
+>>> smn(3, "smith")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> smn("john", 3)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> smn("", "smith")
+My Last name is smith
+>>> smn("john")
+My First name is john
+>>> smn("@#$_&", "?!;:")
+My name is @#$_& ?!;:
+>>> n = "s" * (2 ** 30)
+>>> smn(n) # doctest: +ELLIPSIS
+My First name is ssssss...
