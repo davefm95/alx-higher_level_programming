@@ -23,3 +23,5 @@ My name is @#$_& ?!;:
 >>> n = "s" * (2 ** 30)
 >>> smn(n) # doctest: +ELLIPSIS
 My First name is ssssss...
+>>> smn("")
+Name not given
