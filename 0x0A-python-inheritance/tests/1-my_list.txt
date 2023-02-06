@@ -1,0 +1,30 @@
+The 1-my_list module
+====================
+Using print_sorted
+__________________
+>>> MyList = __import__('1-my_list').MyList
+
+>>> ml = MyList()
+>>> ml.print_sorted()
+[]
+>>> ml.append(1)
+>>> ml.print_sorted()
+[1]
+>>> ml.append(2)
+>>> ml.append(1)
+>>> ml.append(2)
+>>> ml.print_sorted()
+[1, 1, 2, 2]
+>>> ml = MyList()
+>>> ml.append(3)
+>>> ml.append(3)
+>>> ml.append(3)
+>>> ml.print_sorted()
+[3, 3, 3]
+>>> ml = MyList()
+>>> ml.append(10)
+>>> ml.append(8)
+>>> ml.append(7)
+>>> ml.append(9)
+>>> ml.print_sorted()
+[7, 8, 9, 10]
