@@ -31,3 +31,15 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+
+    class Square(Rectangle):
+        """This class inherits from rectaangle"""
+        def __init__(self, size):
+            """Init for sqiare class"""
+            self.integer_validator(size)
+            self.__size = size
+
+        def area(self):
+            return self.__size * self.__size
+        
