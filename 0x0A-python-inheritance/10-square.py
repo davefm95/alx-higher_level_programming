@@ -41,5 +41,5 @@ class Rectangle(BaseGeometry):
             self.__size = size
 
         def area(self):
+            """implements the area"""
             return self.__size * self.__size
-        
