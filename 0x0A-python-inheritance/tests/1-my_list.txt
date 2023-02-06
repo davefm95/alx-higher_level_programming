@@ -28,3 +28,11 @@ __________________
 >>> ml.append(9)
 >>> ml.print_sorted()
 [7, 8, 9, 10]
+>>> ml = MyList()
+>>> ml.append(-1)
+>>> ml.append(-2)
+>>> ml.append(-3)
+>>> ml.append(0)
+>>> ml.append(-4)
+>>> ml.print_sorted()
+[-4, -3, -2, -1, 0]
