@@ -2,6 +2,7 @@
 """This module returns json string of an object"""
 import json
 
+
 def to_json_string(my_obj):
     """This func returns json rep of an obj"""
-    json.dumps(my_obj)
+    return json.dumps(my_obj)
