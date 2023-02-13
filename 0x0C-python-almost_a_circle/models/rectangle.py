@@ -7,11 +7,11 @@ class Rectangle(Base):
     """Rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """inits Rectangle class"""
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -68,3 +68,56 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """ Returns AreA"""
+        return self.width * self.height
+
+    def display(self):
+        """Displays the rect with a character"""
+        print("\n" *self.y, end="")
+        for i in range(self.height):
+            print(" " *self.x, end="")
+            for j in range(self.height):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        """returns a string"""
+        st = "[Rectangle] ({:d}) {:d}/{:d}".format(self.id, self.x, self.y)
+        return "{:s} - {:d}/{:d}".format(st, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """updates the instance variables"""
+        if len(args) == 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+        else:
+            if len(args) == 1:
+                self.id, = args
+            elif len(args) == 2:
+                self.id, self.width = args
+            elif len(args) == 3:
+                self.id, self.width, self.height = args
+            elif len(args) == 4:
+                self.id, self.width, self.height, self.x = args
+            elif len(args) >= 5:
+                self.id, self.width, self.height, self.x, self.y = args
+
+    def to_dictionary(self):
+        """returns dictionary object"""
+        dct = {}
+        dct["id"] = self.id
+        dct["width"] = self.width
+        dct["height"] = self.height
+        dct["x"] = self.x
+        dct["y"] = self.y
+        return dct

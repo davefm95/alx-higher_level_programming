@@ -6,7 +6,13 @@ import unittest
 
 
 class TestRectangle(unittest.TestCase):
+    """Test Revtangle class"""
+    def setUp(self):
+        """resets all shared class variables"""
+        Rectangle.__nb_objects = 0
+        
     def test_rect(self):
+        """tests function"""
         r = Rectangle(2, 3, 1, 4, 101)
         self.assertEqual(2, r.width)
         self.assertEqual(3, r.height)
@@ -29,6 +35,14 @@ class TestRectangle(unittest.TestCase):
             r.x = -1
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r.y = -1
+        r = Rectangle(5, 7)
+        self.assertEqual(0, r.x)
+        self.assertEqual(0, r.y)
+        self.assertEqual(1, r.id)
+        with self.assertRaises(TypeError):
+            r = Rectangle(5)
+        with self.assertRaises(TypeError):
+            r = Rectangle()
 
 if __name__ == "__main__":
     unittest.main()
