@@ -38,3 +38,10 @@ class Base:
         name += ".json"
         with open(name, "w", encoding="utf-8") as f:
             f.write(st)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns objevt"""
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)

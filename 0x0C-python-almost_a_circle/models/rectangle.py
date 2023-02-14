@@ -75,9 +75,9 @@ class Rectangle(Base):
 
     def display(self):
         """Displays the rect with a character"""
-        print("\n" *self.y, end="")
+        print("\n" * self.y, end="")
         for i in range(self.height):
-            print(" " *self.x, end="")
+            print(" " * self.x, end="")
             for j in range(self.height):
                 print("#", end="")
             print("")
