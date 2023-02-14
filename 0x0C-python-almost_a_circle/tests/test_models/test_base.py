@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Test modeule for base class"""
-import sys
-sys.path.append("...")
-from models.base import Base
 import unittest
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):

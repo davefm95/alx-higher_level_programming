@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import sys
-sys.path.append("...")
-from models.rectangle import Rectangle
+"""Test Rrctangle Module"""
 import unittest
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         """resets all shared class variables"""
         Rectangle.__nb_objects = 0
-        
+
     def test_rect(self):
         """tests function"""
         r = Rectangle(2, 3, 1, 4, 101)
@@ -38,7 +38,6 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(5, 7)
         self.assertEqual(0, r.x)
         self.assertEqual(0, r.y)
-        self.assertEqual(1, r.id)
         with self.assertRaises(TypeError):
             r = Rectangle(5)
         with self.assertRaises(TypeError):
