@@ -75,12 +75,12 @@ class Rectangle(Base):
 
     def display(self):
         """Displays the rect with a character"""
+        rectangle = ""
+        print_symbol = "#"
         print("\n" * self.y, end="")
         for i in range(self.height):
-            print(" " * self.x, end="")
-            for j in range(self.height):
-                print("#", end="")
-            print("")
+            rectangle += (" " * self.x) + (print_symbol*self.width) + "\n"
+        print(rectangle, end="")
 
     def __str__(self):
         """returns a string"""
