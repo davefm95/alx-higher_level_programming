@@ -34,7 +34,7 @@ class Base:
             st = cls.to_json_string(ld)
         name = "Base"
         if st != "[]":
-            name = list_objs[0].__class__.__name__
+            name = cls.__name__
         name += ".json"
         with open(name, "w", encoding="utf-8") as f:
             f.write(st)
