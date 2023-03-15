@@ -1,2 +1,2 @@
-/*Shows table ingo*/
+--Shows table ingo
 DESC first_table;
