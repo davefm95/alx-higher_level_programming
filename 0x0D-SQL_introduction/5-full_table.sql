@@ -1,3 +1,3 @@
---Shows table ingo
+-- Shows table ingo
 SHOW CREATE TABLE first_table;
 
