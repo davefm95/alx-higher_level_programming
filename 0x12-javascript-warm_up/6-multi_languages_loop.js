@@ -1,3 +1,7 @@
 #!/usr/bin/node
 const txt = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-txt.forEach(value => console.log(value));
+let i = 0;
+while (i < txt.length) {
+  console.log(txt[i]);
+  i++;
+}
