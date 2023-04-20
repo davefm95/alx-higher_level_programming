@@ -5,7 +5,7 @@ import MySQLdb
 from sys import argv
 if __name__ == "__main__":
     """ List ststes in table """
-    name, pwd, db_name = argv[1], argv[2], argv[3]
+    name, pw, db_name = argv[1], argv[2], argv[3]
     db = MySQLdb.connect(port=3306, user=name, password=pw, database=db_name)
     c = db.cursor()
     c.execute("SELECT * FROM states")
