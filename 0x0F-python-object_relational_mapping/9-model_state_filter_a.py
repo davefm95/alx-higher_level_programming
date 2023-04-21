@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Returns first state in states table"""
+""" Returns  state with letter a in states table"""
 from sqlalchemy import create_engine
 from sys import argv
 from model_state import Base, State
@@ -13,8 +13,6 @@ if __name__ == "__main__":
     engine = create_engine(const, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).first()
-    if state:
+    states = session.query(State).filter(State.name.like('%a%')).all()
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
