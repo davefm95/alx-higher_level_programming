@@ -7,6 +7,6 @@ if __name__ == "__main__":
         contentstring = bytecontent.decode('utf-8')
         ctype = type(bytecontent)
         print(f"""Body response:
-        - type: {ctype}
-        - content: {bytecontent}
-        - utf8 content: {contentstring}""")
+    - type: {ctype}
+    - content: {bytecontent}
+    - utf8 content: {contentstring}""")
