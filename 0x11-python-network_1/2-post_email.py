@@ -3,8 +3,10 @@
 
 import sys
 from urllib import request, parse
-prop = {'email': sys.argv[2]}
-data = parse.urlencode(prop).encode('ascii')
-req = request.Request(sys.argv[1], data)
-with request.urlopen(req) as resp:
-    print(resp.read().decode('utf-8'))
+if __name__ == "__main__":
+    prop = {'email': sys.argv[2]}
+    data = parse.urlencode(prop).encode('ascii')
+    req = request.Request(sys.argv[1], data)
+    with request.urlopen(req) as resp:
+        print(resp.read().decode('utf-8'))
+    
