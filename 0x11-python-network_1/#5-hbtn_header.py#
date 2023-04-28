@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+"""This scriots fetches data drom a url amd shows x-request-id"""
+import sys
+import requests
+if __name__ == "__main__":
+    
