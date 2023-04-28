@@ -2,6 +2,5 @@
 """displays the avlue of the requset if of a http request"""
 from sys import argv
 import urllib.request
-req = urllib.request.Request(argv[1])
-with urllib.request.urlopen(req) as resp:
+with urllib.request.urlopen(argv[1]) as resp:
     print(resp.info()['X-Request-Id'])
